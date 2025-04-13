@@ -1,5 +1,5 @@
 //SPDX-License-Identifier: MIT
-pragma solidity ^0.8.26;
+pragma solidity ^0.8.18;
 
 contract SimpleStorage1{
 uint256 myFavouriteNumber; //initialzie to 0
@@ -19,7 +19,7 @@ Person[] public listOfPeople;
 
 mapping(string=>uint256)public nameToFavouriteNumber;
 
-function store(uint256 _favouriteNumber) public {
+function store(uint256 _favouriteNumber) public virtual{
     myFavouriteNumber = _favouriteNumber;
 }
 //view - just read, pure - no read/write - just returns something
